@@ -20,3 +20,6 @@ tun:
   stack: mixed
   auto-route: true
   auto-detect-interface: true
+
+rules:
+  - MATCH,PROXY
