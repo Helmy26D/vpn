@@ -1,0 +1,22 @@
+mixed-port: 7897
+
+mode: global
+
+proxies:
+  - name: SSH-SOCKS
+    type: socks5
+    server: 127.0.0.1
+    port: 1080
+    udp: true
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - SSH-SOCKS
+
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
